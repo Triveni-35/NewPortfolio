@@ -78,8 +78,8 @@ export default function HeroSection() {
           </h1>
 
           {/* Role */}
-          <p className="text-xl md:text-2xl text-white/80 font-light leading-snug max-w-xl mb-10 animate-fade-in stagger-2">Software Engineer .
-Java Backend Developer · Spring Boot Microservices · 
+          <p className="text-xl md:text-2xl text-white/80 font-light leading-snug max-w-xl mb-10 animate-fade-in stagger-2">
+            Software Engineer with 1+ year of experience in Spring Boot microservices, banking integrations, and secure enterprise applications.
           </p>
 
           {/* CTAs */}
@@ -114,7 +114,7 @@ Java Backend Developer · Spring Boot Microservices ·
             <div className="text-sm text-white/60 font-medium">CGPA · CBIT Hyderabad</div>
           </div>
           <div className="sm:pl-12" suppressHydrationWarning>
-            <div className="text-3xl md:text-4xl font-display font-semibold text-white mb-1" suppressHydrationWarning>8</div>
+            <div className="text-3xl md:text-4xl font-display font-semibold text-white mb-1" suppressHydrationWarning>8+</div>
             <div className="text-sm text-white/60 font-medium">Security vulnerabilities fixed</div>
           </div>
         </div>

@@ -4,71 +4,81 @@ import React, { useEffect, useRef } from 'react';
 const skillCategories = [
   {
     title: 'Languages',
-    skills: ['Java', 'SQL', 'JavaScript', 'Python'],
+    skills: ['Java', 'Python', 'SQL', 'JavaScript'],
     span: 'col-span-1',
     rowSpan: '',
     accent: true,
   },
   {
-    title: 'Backend Technologies',
+    title: 'AI & Agentic Systems',
     skills: [
-      'Spring Boot',
-      'Spring Security',
-      'Spring Data JPA',
-      'Hibernate',
-      'REST APIs',
-      'Microservices',
-      'SOAP Web Services',
-      'Oracle Service Bus (OSB)',
-      'JWT Authentication',
+      'Generative AI',
+      'LLMs',
+      'Agentic AI',
+      'RAG',
+      'Prompt Engineering',
+      'Function Calling',
+      'Structured Outputs',
+      'LangGraph',
+      'LangChain',
+      'Pydantic',
+      'Google Gemini',
     ],
     span: 'col-span-1 md:col-span-2',
     rowSpan: 'md:row-span-2',
     accent: false,
   },
   {
-    title: 'Frontend',
-    skills: ['Angular', 'HTML', 'CSS', 'Bootstrap'],
-    span: 'col-span-1',
-    rowSpan: '',
-    accent: false,
-  },
-  {
-    title: 'Databases',
-    skills: ['MySQL', 'MongoDB'],
-    span: 'col-span-1',
-    rowSpan: '',
-    accent: false,
-  },
-  {
-    title: 'Tools & Platforms',
+    title: 'Backend',
     skills: [
-      'Git',
-      'GitHub',
-      'SVN',
-      'Jenkins',
-      'Postman',
-      'Swagger UI',
-      'WebLogic Server',
-      'JDeveloper',
-      'SOAP UI',
-      'Oracle Service Bus',
-      'SOA'
+      'Spring Boot',
+      'FastAPI',
+      'Spring Security',
+      'Spring MVC',
+      'Spring Data JPA',
+      'Hibernate',
+      'REST APIs',
+      'Microservices',
+      'SOAP Web Services',
+      'JWT Authentication',
+      'SOA',
     ],
     span: 'col-span-1',
     rowSpan: '',
     accent: false,
   },
   {
-    title: 'Core Concepts',
+    title: 'Frontend',
+    skills: ['Angular', 'HTML5', 'CSS3', 'Bootstrap', 'React', 'TypeScript'],
+    span: 'col-span-1',
+    rowSpan: '',
+    accent: false,
+  },
+  {
+    title: 'Databases',
+    skills: ['PostgreSQL', 'pgvector', 'MySQL', 'MongoDB'],
+    span: 'col-span-1',
+    rowSpan: '',
+    accent: false,
+  },
+  {
+    title: 'Tools & Core Concepts',
     skills: [
+      'Git',
+      'GitHub',
+      'SVN',
+      'Maven',
+      'Jenkins',
+      'Postman',
+      'Swagger UI',
+      'JDeveloper',
+      'SOAP UI',
+      'Pytest',
       'OOP',
       'DBMS',
-      'Data Structures & Algorithms',
+      'DSA',
       'Distributed Systems',
       'Design Patterns',
-      'Maven',
-      'Agile/Scrum',
     ],
     span: 'col-span-1 md:col-span-2',
     rowSpan: '',
@@ -104,7 +114,6 @@ export default function SkillsSection() {
   return (
     <section id="skills" ref={sectionRef} className="py-20 px-6 lg:px-12 bg-background">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="mb-16">
           <span className="text-primary font-bold text-xs uppercase tracking-widest mb-3 block">
             Technical Expertise
@@ -114,13 +123,6 @@ export default function SkillsSection() {
           </h2>
         </div>
 
-        {/* Bento grid */}
-        {/* BENTO MAP (grid-cols-3 desktop):
-            Row 1: [col-1: Languages cs-1] [col-2: Backend cs-2 rs-2] [col-3: Frontend cs-1]
-            Row 2: [col-1: Databases cs-1] [col-2: OCCUPIED(Backend)] [col-3: Tools cs-1]
-            Row 3: [col-1: Core cs-2 (fills last row)] [col-3: OCCUPIED→cs-2]
-            Placed 6/6 ✓
-        */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-auto">
           {skillCategories.map((cat, idx) => (
             <div
